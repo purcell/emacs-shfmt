@@ -1,4 +1,4 @@
-;;; shfmt.el --- Reformat Nix using shfmt  -*- lexical-binding: t; -*-
+;;; shfmt.el --- Reformat shell scripts using shfmt  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020  Steve Purcell
 
@@ -23,7 +23,7 @@
 
 ;;; Commentary:
 
-;; Provides commands and a minor mode for easily reformatting Nix code
+;; Provides commands and a minor mode for easily reformatting shell scripts
 ;; using the external "shfmt" program.
 
 ;; Call `shfmt-buffer' or `shfmt-region' as convenient.
@@ -51,7 +51,7 @@
 (require 'reformatter)
 
 (defgroup shfmt nil
-  "Reformat Nix using shfmt."
+  "Reformat shell scripts using shfmt."
   :group 'languages)
 
 (defcustom shfmt-command "shfmt"

@@ -23,7 +23,7 @@ Usage
 Customise the `shfmt-command` variable as desired, then call
 `shfmt-buffer` or `shfmt-region` as convenient.
 
-Enable `shfmt-on-save-mode` in Nix buffers like this:
+Enable `shfmt-on-save-mode` in Shell Mode buffers like this:
 
 ```el
 (add-hook 'sh-mode-hook 'shfmt-on-save-mode)
