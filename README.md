@@ -7,7 +7,7 @@ shfmt.el
 ==============
 
 This Emacs library provides commands and a minor mode for easily reformatting
-shell script source code using the [shfmt][shfmt] command.
+shell script source code using the [shfmt][shfmt] program.
 
 Installation
 =============
