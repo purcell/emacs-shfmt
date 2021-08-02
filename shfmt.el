@@ -30,7 +30,7 @@
 
 ;; Enable `shfmt-on-save-mode' in shell script buffers like this:
 
-;;     (add-hook 'shell-mode-hook 'shfmt-on-save-mode)
+;;     (add-hook 'sh-mode-hook 'shfmt-on-save-mode)
 
 ;; or locally to your project with a form in your .dir-locals.el like
 ;; this:
