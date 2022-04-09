@@ -70,7 +70,11 @@
 ;;;###autoload (autoload 'shfmt-on-save-mode "shfmt" nil t)
 (reformatter-define shfmt
   :program shfmt-command
-  :args shfmt-arguments
+  :args (append shfmt-arguments
+                (if (and (eq indent-tabs-mode nil)
+                     (not (member "-i" shfmt-arguments)))
+                    (list "-i" (number-to-string tab-width))
+                  nil))
   :lighter " ShFmt"
   :group 'shfmt)
 
