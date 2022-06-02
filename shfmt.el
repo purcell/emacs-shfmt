@@ -70,7 +70,7 @@
 ;;;###autoload (autoload 'shfmt-on-save-mode "shfmt" nil t)
 (reformatter-define shfmt
   :program shfmt-command
-  :args shfmt-arguments
+  :args (append (list "-filename" (or (buffer-file-name) input-file)) shfmt-arguments)
   :lighter " ShFmt"
   :group 'shfmt)
 
