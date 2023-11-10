@@ -1,6 +1,6 @@
 [![Melpa Status](http://melpa.org/packages/shfmt-badge.svg)](http://melpa.org/#/shfmt)
 [![Melpa Stable Status](http://stable.melpa.org/packages/shfmt-badge.svg)](http://stable.melpa.org/#/shfmt)
-[![Build Status](https://github.com/purcell/emacs-shfmt/workflows/CI/badge.svg)](https://github.com/purcell/emacs-shfmt/actions)
+[![Build Status](https://github.com/purcell/emacs-shfmt/actions/workflows/test.yml/badge.svg)](https://github.com/purcell/emacs-shfmt/actions/workflows/test.yml)
 <a href="https://www.patreon.com/sanityinc"><img alt="Support me" src="https://img.shields.io/badge/Support%20Me-%F0%9F%92%97-ff69b4.svg"></a>
 
 shfmt.el
