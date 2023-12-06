@@ -60,7 +60,7 @@
 
 (defcustom shfmt-arguments ()
   "Arguments passed to shfmt."
-  :type '(list string))
+  :type '(repeat string))
 
 
 ;; Commands for reformatting
