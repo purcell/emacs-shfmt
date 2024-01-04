@@ -71,7 +71,7 @@
 (reformatter-define shfmt
   :program shfmt-command
   ;; Pass the filename to `shfmt` as it may influence the Editorconfig pattern "shfmt" picks up
-  :args (append (list "-filename" (or (buffer-file-name) input-file)) shfmt-arguments)
+  :args (append (list "--filename" (or (buffer-file-name) input-file)) shfmt-arguments)
   :lighter " ShFmt"
   :group 'shfmt)
 
