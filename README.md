@@ -44,6 +44,19 @@ e.g. with:
 (define-key 'sh-mode-map (kbd "C-c C-f") 'shfmt)
 ```
 
+Use-package
+==========
+
+Alternatively, here is how you can install and configure `shfmt` via use-package
+
+```el
+(use-package shfmt
+  :hook
+  (sh-mode . shfmt-on-save-mode)
+  :custom
+  (shfmt-arguments '("-i" "4" "-ci" "-d")))
+```
+
 [melpa]: http://melpa.org
 [shfmt]: https://github.com/mvdan/sh
 
