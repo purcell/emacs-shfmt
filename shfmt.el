@@ -59,7 +59,11 @@
   :type 'string)
 
 (defcustom shfmt-arguments ()
-  "Arguments passed to shfmt."
+  "Arguments passed to shfmt.
+Whichever arguments are passed, it is important that shfmt be run
+in reformatting mode: it should output a reformatted version of
+the input text.  This means that you should avoid flags like
+`-d', for example."
   :type '(repeat string))
 
 
