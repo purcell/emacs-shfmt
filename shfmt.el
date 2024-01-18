@@ -72,6 +72,7 @@ the input text.  This means that you should avoid flags like
 ;;;###autoload (autoload 'shfmt-buffer "shfmt" nil t)
 ;;;###autoload (autoload 'shfmt-region "shfmt" nil t)
 ;;;###autoload (autoload 'shfmt-on-save-mode "shfmt" nil t)
+;;;###autoload (autoload 'shfmt-mode "shfmt" nil t)
 (reformatter-define shfmt
   :program shfmt-command
   ;; Pass the filename to `shfmt` as it may influence the Editorconfig pattern "shfmt" picks up
