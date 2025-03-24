@@ -66,6 +66,24 @@ the input text.  This means that you should avoid flags like
 `-d', for example."
   :type '(repeat string))
 
+(defcustom shfmt-respect-sh-basic-offset nil
+  "Respect `sh-basic-offset' when adjusting indentation.
+When non-nil, shfmt will automatically align the indentation to match the value
+of `sh-basic-offset'."
+  :type 'boolean)
+
+(defun shfmt--args (input-file)
+  "Return the list of arguments for shfmt.
+INPUT-FILE is the shell script file being formatted.
+If `shfmt-respect-sh-basic-offset' is non-nil and `sh-basic-offset' is set,
+include the -i option to align indentation accordingly.
+Additional arguments from `shfmt-arguments' are also included."
+  (append
+   (list "--filename" input-file)
+   (when (and shfmt-respect-sh-basic-offset (boundp 'sh-basic-offset))
+     (list "-i" (number-to-string sh-basic-offset)))
+   (list shfmt-arguments)))
+
 
 ;; Commands for reformatting
 
@@ -75,7 +93,8 @@ the input text.  This means that you should avoid flags like
 (reformatter-define shfmt
   :program shfmt-command
   ;; Pass the filename to `shfmt` as it may influence the Editorconfig pattern "shfmt" picks up
-  :args (append (list "--filename" (or (buffer-file-name) input-file)) shfmt-arguments)
+  :args (shfmt--args (or (buffer-file-name (buffer-base-buffer))
+                         input-file))
   :lighter " ShFmt"
   :group 'shfmt)
 
