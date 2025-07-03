@@ -82,7 +82,7 @@ Additional arguments from `shfmt-arguments' are also included."
    (list "--filename" input-file)
    (when (and shfmt-respect-sh-basic-offset (boundp 'sh-basic-offset))
      (list "-i" (number-to-string sh-basic-offset)))
-   (list shfmt-arguments)))
+   shfmt-arguments))
 
 
 ;; Commands for reformatting
